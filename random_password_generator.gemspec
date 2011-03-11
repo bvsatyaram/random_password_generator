@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "random_password_generator"
   s.version     = RandomPasswordGenerator::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Satyaram B V"]
+  s.email       = ["bvsatyaram AT gmail DOT com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Random password generator}
+  s.description = %q{Generates a random password with variuos useful options}
 
   s.rubyforge_project = "random_password_generator"
 
