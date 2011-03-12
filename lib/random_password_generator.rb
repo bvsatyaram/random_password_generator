@@ -8,7 +8,7 @@ module RandomPasswordGenerator
   #   +:skip_numbers+:                  Skips numbers if set to true
   #   +:skip_symbols+:                  Skips symbols if set to true
   #   +:dont_exclude_unfrieldly_chars+: Does not skip commonly mistaken characters if set to true
-  #   +:skip_url_safe+:                 Skips URL reserved and unfriendly characters if set to true
+  #   +:skip_url_unsafe+:                 Skips URL reserved and unfriendly characters if set to true
   def self.generate(length = 8, options = {})
     chars = []
     chars += ("a".."z").to_a unless options[:skip_lower_case]
@@ -18,7 +18,7 @@ module RandomPasswordGenerator
     # Skip easily mistaken characters
     chars -= %w(i I o O 0 1 l !) unless options[:dont_exclude_unfrieldly_chars]
     # Skip characters that are unsafe for urls
-    chars -= %w($ & + , / : ; = ? @ < > # % { } | \ ^ ~ [ ] `) if options[:skip_url_unsafe]
+    chars -= %w($ & + , / : \; = ? @ < > # % { } | \ ^ ~ [ ] `) if options[:skip_url_unsafe]
 
     (1..length).collect{chars[rand(chars.size)]}.join
   end
