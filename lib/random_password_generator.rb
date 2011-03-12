@@ -15,7 +15,7 @@ module RandomPasswordGenerator
     chars += ("0".."9").to_a unless options[:skip_numbers]
     chars += ["!", "@", "#", "$", "%", "^", "&", "(", ")", "{", "}", "[", "]", "-", "_", "<", ">", "?"] unless options[:skip_symbols]
     # Skip easily mistaken characters
-    chars -= %w(i o 0 1 l !) unless options[:dont_exclude_unfrieldly_chars]
+    chars -= %w(i I o O 0 1 l !) unless options[:dont_exclude_unfrieldly_chars]
 
     (1..length).collect{chars[rand(chars.size)]}.join
   end
