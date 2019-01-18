@@ -1,6 +1,8 @@
 RandomPasswordGenerator
 =============
 
+[![Gem Version](https://badge.fury.io/rb/random_password_generator.svg)](https://badge.fury.io/rb/random_password_generator)
+
 `RandomPasswordGenerator` gem is the ultimate random password generator. It is highly customizable.
 Special characters can be skipped from the password. TO make th password easily readable and less confusing,
 we can also skip commonly confused characters. To put in a nut shell, `RandomPasswordGenerator` is all that you need for random password generation, what ever be your need.
