@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module RandomPasswordGenerator
   # Generates a random password
   # Arguments:
@@ -20,6 +22,6 @@ module RandomPasswordGenerator
     # Skip characters that are unsafe for urls
     chars -= %w($ & + , / : \; = ? @ < > # % { } | ^ ~ [ ] `) if options[:skip_url_unsafe]
 
-    (1..length).collect{chars[rand(chars.size)]}.join
+    (1..length).collect{chars[SecureRandom.random_number(chars.size)]}.join
   end
 end
